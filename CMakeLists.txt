@@ -1,0 +1,16 @@
+cmake_minimum_required(VERSION 3.3)
+project(oziexplorer_uiview_converter_gtk2)
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 -static-libgcc -static-libstdc++")
+find_package(PkgConfig)
+pkg_check_modules(GTKMM2 gtkmm-2.4)
+
+link_directories(${GTKMM2_LIBRARY_DIRS})
+include_directories(${GTKMM2_INCLUDE_DIRS})
+
+set(SOURCE_FILES main.cpp Converter.cpp Converter.h ConversionError.cpp ConversionError.h ConversionWorker.cpp ConversionWorker.h)
+set(CONVERSION_TEST_FILES Converter.h Converter.cpp ConversionError.h ConversionError.cpp ConversionTest.cpp)
+add_executable(oziexplorer_uiview_converter_gtk2 ${SOURCE_FILES})
+if(CMAKE_BUILD_TYPE STREQUAL "Debug")
+    add_executable(ConversionTest ${CONVERSION_TEST_FILES})
+endif()
+target_link_libraries(oziexplorer_uiview_converter_gtk2 ${GTKMM2_LIBRARIES})
