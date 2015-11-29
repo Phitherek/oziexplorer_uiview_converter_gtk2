@@ -1,6 +1,7 @@
 cmake_minimum_required(VERSION 3.3)
 project(oziexplorer_uiview_converter_gtk2)
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 -static-libgcc -static-libstdc++")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
+set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -static-libgcc -static-libstdc++")
 find_package(PkgConfig)
 pkg_check_modules(GTKMM2 gtkmm-2.4)
 
