@@ -7,7 +7,7 @@ This is a small program that converts OziExplorer .map map file info format to U
 
 ## Versions
 
-This is a master branch which can contain features that are in testing and/or incomplete. All released versions have their appropriate tags. Current stable version is 0.3-gtk.
+This is a master branch which can contain features that are in testing and/or incomplete. All released versions have their appropriate tags. Current stable version is 0.3.1-gtk2.
 
 ## Dependencies
 
@@ -29,6 +29,12 @@ cmake -G"Generator name" .
 This program is licensed under the MIT License. See LICENSE file for details.
 
 ## Changelog
+
+#### v. 0.3.1-gtk2
+
+* Added minimal window size
+* Fix of crash on Windows when using sprintf (used snprintf instead)
+* Hopefully temporary fix for GUI crashes on Windows (and other systems partially also) - added a delay of 500 ms between conversions so that GUI widgets are able to be updated on time.
 
 #### v. 0.3-gtk2
 
