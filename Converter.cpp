@@ -4,7 +4,6 @@
 
 #include "Converter.h"
 #include "ConversionError.h"
-#include "Helper.h"
 
 #include <fstream>
 #include <vector>
@@ -144,7 +143,7 @@ void Converter::convert() {
         buffer[i] = '\000';
     }
     sprintf(buffer, "%03d.%02.2f%c", fullon_deg, fullon_min, fullondir);
-    out << buffer << Helper::endline();
+    out << buffer << "\n";
     for(int i = 0; i < 10; i++) {
         buffer[i] = '\000';
     }
@@ -154,7 +153,7 @@ void Converter::convert() {
         buffer[i] = '\000';
     }
     sprintf(buffer, "%03d.%02.2f%c", flrlon_deg, flrlon_min, flrlondir);
-    out << buffer << Helper::endline();
-    out << "OziExplorer to UI-View(C)SO9PH" << Helper::endline();
+    out << buffer << "\n";
+    out << "OziExplorer to UI-View(C)SO9PH" << "\n";
     out.close();
 }
