@@ -9,15 +9,15 @@
 using namespace std;
 
 int main() {
-    cout << "ConversionTest for OziExplorer to UI-View Converter v. 0.2 (C) 2015 by Phitherek_ SO9PH" << "\n";
+    cout << "ConversionTest for OziExplorer to UI-View Converter v. 0.2 (C) 2015 by Phitherek_ SO9PH" << std::endl;
     try {
         Converter c("siatka.map", "siatka.inf");
         c.convert();
     } catch(ConversionError& e) {
-        cerr << "Caught ConversionError: " << e.what() << "\n";
-        cout << "Failure!" << "\n";
+        cerr << "Caught ConversionError: " << e.what() << std::endl;
+        cout << "Failure!" << std::endl;
         return EXIT_FAILURE;
     }
-    cout << "Success!" << "\n";
+    cout << "Success!" << std::endl;
     return EXIT_SUCCESS;
 }
