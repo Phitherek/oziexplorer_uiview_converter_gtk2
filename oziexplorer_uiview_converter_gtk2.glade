@@ -28,8 +28,10 @@
   </object>
   <object class="GtkWindow" id="mainwindow">
     <property name="can_focus">False</property>
-    <property name="title" translatable="yes">OziExplorer to UI-View Converter v. 0.3-gtk2 (C) 2015 by Phitherek_ SO9PH</property>
+    <property name="title" translatable="yes">OziExplorer to UI-View Converter v. 0.3.1-gtk2 (C) 2015 by Phitherek_ SO9PH</property>
     <property name="role">oziexplorer_uiview_converter_mainwindow_gtk2</property>
+    <property name="default_width">640</property>
+    <property name="default_height">480</property>
     <child>
       <object class="GtkScrolledWindow" id="mainscrolls">
         <property name="visible">True</property>
@@ -403,7 +405,7 @@
     <property name="transient_for">mainwindow</property>
     <property name="has_separator">True</property>
     <property name="program_name">OziExplorer to UI-View Converter</property>
-    <property name="version">0.3-gtk2</property>
+    <property name="version">v. 0.3.1-gtk2</property>
     <property name="copyright" translatable="yes">(C) 2015 by Phitherek_ SO9PH</property>
     <property name="license" translatable="yes">Copyright (c) 2015 Phitherek_ SO9PH
 

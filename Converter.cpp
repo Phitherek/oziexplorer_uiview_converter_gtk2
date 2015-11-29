@@ -138,22 +138,27 @@ void Converter::convert() {
         buffer[i] = '\000';
     }
     sprintf(buffer, "%02d.%02.2f%c", fullat_deg, fullat_min, fullatdir);
-    out << buffer << ", ";
+    std::string toprint;
+    toprint = buffer;
+    out << toprint << ", ";
     for(int i = 0; i < 10; i++) {
         buffer[i] = '\000';
     }
     sprintf(buffer, "%03d.%02.2f%c", fullon_deg, fullon_min, fullondir);
-    out << buffer << std::endl;
+    toprint = buffer;
+    out << toprint << std::endl;
     for(int i = 0; i < 10; i++) {
         buffer[i] = '\000';
     }
     sprintf(buffer, "%02d.%02.2f%c", flrlat_deg, flrlat_min, flrlatdir);
-    out << buffer << ", ";
+    toprint = buffer;
+    out << toprint << ", ";
     for(int i = 0; i < 10; i++) {
         buffer[i] = '\000';
     }
     sprintf(buffer, "%03d.%02.2f%c", flrlon_deg, flrlon_min, flrlondir);
-    out << buffer << std::endl;
+    toprint = buffer;
+    out << toprint << std::endl;
     out << "OziExplorer to UI-View(C)SO9PH" << std::endl;
     out.close();
 }
